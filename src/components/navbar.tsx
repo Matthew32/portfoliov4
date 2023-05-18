@@ -145,24 +145,12 @@ export default function Navbar() {
           </button>
         </div>
       </div>
-      <div className="space-x-8 block md:hidden mt-4">
+      <div className="mx-auto space-x-8 block md:hidden mt-4">
         <Link
-          href="/about"
+          href="/"
           className="text-base font-normal text-gray-600 dark:text-gray-300"
         >
           About
-        </Link>
-        <Link
-          href="/projects"
-          className="text-base font-normal text-gray-600 dark:text-gray-300"
-        >
-          Projects
-        </Link>
-        <Link
-          href="/experience"
-          className="text-base font-normal text-gray-600 dark:text-gray-300"
-        >
-          Experience
         </Link>
         <Link
           href="/contact"
