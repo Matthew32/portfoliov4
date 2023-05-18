@@ -3,7 +3,7 @@ import axios from "axios";
 const getRandomCat = async () => {
     try{
     const res = await axios.get(
-      `https://api.thecatapi.com/v1/images/search`
+      `https://matttavern.com/api/pur`
     );
 
     let repos = res.data[0];
