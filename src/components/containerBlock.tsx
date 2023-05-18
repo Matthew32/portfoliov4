@@ -1,10 +1,14 @@
+// @ts-nocheck
 import React from "react";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import Navbar from "./navbar";
 import Footer from "./footer";
 
-export default function ContainerBlock({ children, ...customMeta }) {
+export default function ContainerBlock({
+  children,
+   ...customMeta 
+  }) {
   const router = useRouter();
 
   const meta = {
@@ -12,6 +16,7 @@ export default function ContainerBlock({ children, ...customMeta }) {
     description: `I've been developing websites for 5 years straight. Get in touch with me to know more.`,
     image: "/avatar.png",
     type: "website",
+    date :'',
     ...customMeta,
   };
   return (

@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const getLatestReposRequest = async (data) => {
+const getLatestReposRequest = async (data = {githubUsername:''}) => {
     const username = data.githubUsername;
 
     try{

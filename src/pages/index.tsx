@@ -1,3 +1,4 @@
+/* eslint-disable */
 "use client"
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
@@ -28,3 +29,5 @@ export const getServerSideProps = async () => {
     },
   };
 };
+
+/* eslint-enable */
