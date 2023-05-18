@@ -11,7 +11,7 @@ import Contact from "../components/contact"
 export default function Home({ repositories }) {
   return (
     <ContainerBlock
-      title="Mateo Martinez - Developer, Writer, Creator"
+      title="Mateo Martinez - Web, Game, Mobile Developer."
     >
       <Hero />
       <LatestCode repositories={repositories} />
