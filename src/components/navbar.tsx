@@ -54,40 +54,15 @@ export default function Navbar() {
             )}
           </Link>
           <Link
-            href="/contact"
+            href="#contact"
             className={`text-base  ${
-              router.asPath === "/contact"
+              router.asPath === "#contact"
                 ? "text-gray-800 font-bold dark:text-gray-400"
                 : "text-gray-600 dark:text-gray-300 font-normal "
             }`}
           >
             Contact
             {router.asPath === "/contact" && (
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                fill="currentColor"
-                className="bi bi-arrow-down inline-block h-3 w-3"
-                viewBox="0 0 16 16"
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1z"
-                />
-              </svg>
-            )}
-          </Link>
-          <Link
-            href="/games"
-            className={`text-base  ${
-              router.asPath === "/games"
-                ? "text-gray-800 font-bold dark:text-gray-400"
-                : "text-gray-600 dark:text-gray-300 font-normal "
-            }`}
-          >
-            Games
-            {router.asPath === "/games" && (
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="16"
@@ -172,22 +147,10 @@ export default function Navbar() {
       </div>
       <div className="mx-auto space-x-8 block md:hidden mt-4">
         <Link
-          href="/"
+          href="#contact"
           className="text-base font-normal text-gray-600 dark:text-gray-300"
         >
           About
-        </Link>
-        <Link
-          href="/contact"
-          className="text-base font-normal text-gray-600 dark:text-gray-300"
-        >
-          Contact
-        </Link>
-        <Link
-          href="/games"
-          className="text-base font-normal text-gray-600 dark:text-gray-300"
-        >
-          Games
         </Link>
       </div>
     </div>

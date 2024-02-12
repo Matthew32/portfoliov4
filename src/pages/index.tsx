@@ -1,7 +1,5 @@
 /* eslint-disable */
 "use client"
-import Head from "next/head";
-import styles from "../styles/Home.module.css";
 import ContainerBlock from "../components/containerBlock";
 import LatestCode from "../components/getLatestRepos";
 import Hero from "../components/hero";
@@ -15,14 +13,13 @@ export default function Home({ repositories }) {
     >
       <Hero />
       <LatestCode repositories={repositories} />
+      <Contact />
     </ContainerBlock>
   );
-  
 }
 
 export const getServerSideProps = async () => {
   const repositories = await getLatestRepos(userData);
-
   return {
     props: {
       repositories,
