@@ -4,7 +4,7 @@ import userData from "../constants/data";
 
 export default function Contact() {
   return (
-    <section id="#contact">
+    <section href="#contact">
       <div className="relative z-10 rounded-md shadow-md bg-[#b92828] p-4 md:p-10 lg:p-20 max-w-6xl mx-auto mt-3 mb-3">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div className="md:ml-4">

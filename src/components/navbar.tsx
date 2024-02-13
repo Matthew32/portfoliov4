@@ -54,9 +54,9 @@ export default function Navbar() {
             )}
           </Link>
           <Link
-            href="#contact"
+            href="/contact"
             className={`text-base  ${
-              router.asPath === "#contact"
+              router.asPath === "/contact"
                 ? "text-gray-800 font-bold dark:text-gray-400"
                 : "text-gray-600 dark:text-gray-300 font-normal "
             }`}
@@ -144,14 +144,6 @@ export default function Navbar() {
             )}
           </button>
         </div>
-      </div>
-      <div className="mx-auto space-x-8 block md:hidden mt-4">
-        <Link
-          href="#contact"
-          className="text-base font-normal text-gray-600 dark:text-gray-300"
-        >
-          About
-        </Link>
       </div>
     </div>
   );
