@@ -3,7 +3,7 @@ const userData = {
     name: "Mateo Martinez",
     designation: "Full-Stack Developer",
     avatarUrl: "/avatar.png",
-    email: "mmartinezmateo93@gmail.com",
+    email: "matthewsdeveloper@gmail.com",
     phone: "+91 9587738861",
     projects: [
       {
