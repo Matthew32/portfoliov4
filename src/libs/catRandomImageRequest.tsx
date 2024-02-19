@@ -6,9 +6,9 @@ const getRandomCat = async () => {
       `https://matttavern.com/api/pur`
     );
 
-    let repos = res.data[0];
+    let repos = res.data;
 
-    return repos.url;
+    return repos;
     }catch(e){
         return "https://ih1.redbubble.net/image.973872181.8811/st,small,507x507-pad,600x600,f8f8f8.jpg";
     }

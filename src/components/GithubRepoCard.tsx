@@ -15,7 +15,6 @@ const GithubRepoCard = ({ title, link, number }) => {
       getCatImageUrl();
     }, 10000); // 1000 milliseconds = 1 second
     return () => clearInterval(interval); // clear interval when component unmounts
-    
   },[]);
     return (
       <a href={link} className="w-full block shadow-2xl">
