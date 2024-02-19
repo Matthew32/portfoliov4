@@ -6,7 +6,7 @@ const getRandomCat = async () => {
       `https://matttavern.com/api/pur`
     );
 
-    let repos = res.data;
+    let repos = res;
 
     return repos;
     }catch(e){
