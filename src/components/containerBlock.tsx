@@ -47,7 +47,7 @@ export default function ContainerBlock({
           <meta property="article:published_time" content={meta.date} />
         )}
       </Head>
-      <main className="dark:bg-gray-800 w-full">
+      <main className="bg-[#BBDEFB] dark:bg-[#1976D2] w-full">
         <Navbar />
         <div>{children}</div>
         <Footer />
