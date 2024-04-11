@@ -5,7 +5,7 @@ const getRandomCat = async () => {
       const res = await fetch(
         `https://matttavern.com/api/pur`
       );
-      let repos = await res.json();
+      let repos = await res.text();
   
       return repos;
     }catch(e){
