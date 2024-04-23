@@ -7,7 +7,6 @@ const GithubRepoCard = ({ title, link, number }) => {
   const [isLoading, setLoading] = useState(false);
   const startLoading = async (event: any) => {
     setLoading(true);
-
   };
   const first = false;
   const getCatImageUrl = async ()=> {
