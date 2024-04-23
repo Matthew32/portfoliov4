@@ -1,7 +1,7 @@
 /* eslint-disable */
 "use client"
 import ContainerBlock from "../components/containerBlock";
-import LatestCode from "../components/getLatestRepos";
+import LatestCode from "../components/getLatestRepos/getLatestRepos";
 import Hero from "../components/hero";
 import getLatestRepos from "../libs/getLatestReposRequest";
 import userData from "../constants/data";

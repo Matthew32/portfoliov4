@@ -1,8 +1,14 @@
 import getRandomCat from "@/libs/catRandomImageRequest";
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, MouseEventHandler, HtmlHTMLAttributes } from 'react';
+import Loading from './Loading'
 
 const GithubRepoCard = ({ title, link, number }) => {
   const [imageUrl, setImageUrl] = useState("");
+  const [isLoading, setLoading] = useState(false);
+  const startLoading = async (event: any) => {
+    setLoading(true);
+
+  };
   const first = false;
   const getCatImageUrl = async ()=> {
     const catUrl = await getRandomCat();
@@ -11,16 +17,14 @@ const GithubRepoCard = ({ title, link, number }) => {
   };
   useEffect(() => {
     getCatImageUrl();
-    const interval = setInterval(() => {
-      getCatImageUrl();
-    }, 10000); // 1000 milliseconds = 1 second
-    return () => clearInterval(interval); // clear interval when component unmounts
   },[]);
     return (
-      <a href={link} className="w-full block shadow-2xl">
-      <div className="relative overflow-hidden">
+      
+      <a onClick={startLoading} href={link} className="hover:shadow-lg shadow-inner w-full block shadow-2xl">
+        <Loading hidden={!isLoading} className="h-full w-full" />
+      <div hidden={isLoading} className="relative overflow-hidden border-8 border-sky-500">
         <div className="h-72 object-cover">
-          <img
+          <img 
             src={imageUrl}
             alt="portfolio"
             className="transform hover:scale-125 transition duration-2000 ease-out object-cover h-full w-full"

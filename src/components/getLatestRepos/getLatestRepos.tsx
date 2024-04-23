@@ -1,14 +1,15 @@
 // @ts-nocheck
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
-import userData from "../constants/data";
-import GithubRepoCard from "./GithubRepoCard";
+import userData from "../../constants/data";
+import GithubRepoCard from "../GithubRepoCard";
+import './getLatestsRepos.css';
 
 export default function LatestCode({ repositories = [] }) {
   const [repos, setRepos] = useState(repositories);
 
   return (
-    <section className="bg-[#BBDEFB] -mt-40 dark:bg-[#1976D2] pb-40">
+    <section class="bg-[#BBDEFB] -mt-40 dark:bg-[#1976D2] pb-40">
       <div className="max-w-6xl mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-center md:pt-40 mx-10">
           <h1 className="text-6xl lg:text-9xl max-w-lg font-bold text-gray-500 my-20 md:my-0 md:text-white dark:text-gray-600 text-center lg:text-left">
@@ -38,10 +39,11 @@ export default function LatestCode({ repositories = [] }) {
         </div>
       </div>
       <div className="bg-[#BBDEFB] dark:bg-[#1976D2]">
-        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 py-10">
+        <div className="  max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 py-10">
           {repos.map((proj, idx) => (
             <GithubRepoCard
               key=""
+              
               title={proj.name}
               link={proj.html_url}
               number={`${idx + 1}`}
