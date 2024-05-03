@@ -11,7 +11,6 @@ const GithubRepoCard = ({ title, link, number, usedImages = [] }) => {
   const first = false;
 
   const hasDuplicates = (url) => {
-    console.log(usedImages);
     for (let i = 0; i < usedImages.length; i++) {
         if (usedImages[i] === url) {
           return true;
