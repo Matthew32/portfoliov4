@@ -7,6 +7,7 @@ import './getLatestsRepos.css';
 
 export default function LatestCode({ repositories = [] }) {
   const [repos, setRepos] = useState(repositories);
+  const [usedImages, setUsedImages] = useState([]);
 
   return (
     <section class="bg-[#BBDEFB] -mt-40 dark:bg-[#1976D2] pb-40">
@@ -43,7 +44,7 @@ export default function LatestCode({ repositories = [] }) {
           {repos.map((proj, idx) => (
             <GithubRepoCard
               key=""
-              
+              usedImages={usedImages}
               title={proj.name}
               link={proj.html_url}
               number={`${idx + 1}`}

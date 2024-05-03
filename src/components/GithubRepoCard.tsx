@@ -2,15 +2,29 @@ import getRandomCat from "@/libs/catRandomImageRequest";
 import React, { useState, useEffect, MouseEventHandler, HtmlHTMLAttributes } from 'react';
 import Loading from './Loading'
 
-const GithubRepoCard = ({ title, link, number }) => {
+const GithubRepoCard = ({ title, link, number, usedImages = [] }) => {
   const [imageUrl, setImageUrl] = useState("");
   const [isLoading, setLoading] = useState(false);
   const startLoading = async (event: any) => {
     setLoading(true);
   };
   const first = false;
+
+  const hasDuplicates = (url) => {
+    console.log(usedImages);
+    for (let i = 0; i < usedImages.length; i++) {
+        if (usedImages[i] === url) {
+          return true;
+      }
+    }
+    return false;
+  };
   const getCatImageUrl = async ()=> {
-    const catUrl = await getRandomCat();
+    let catUrl = await getRandomCat();
+    while(hasDuplicates(catUrl)){
+      catUrl  = await getRandomCat();
+    }
+    usedImages.push(catUrl);
 
     setImageUrl(catUrl);
   };
