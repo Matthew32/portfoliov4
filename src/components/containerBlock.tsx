@@ -20,7 +20,7 @@ export default function ContainerBlock({
     ...customMeta,
   };
   return (
-    <div>
+    <div class="bg-gradient-to-l hover:bg-gradient-to-r">
       <Head>
         <title>{meta.title}</title>
         <meta name="robots" content="follow, index" />
@@ -47,7 +47,7 @@ export default function ContainerBlock({
           <meta property="article:published_time" content={meta.date} />
         )}
       </Head>
-      <main className="bg-[#BBDEFB] dark:bg-[#1976d2] w-full">
+      <main className="h-14 bg-gradient-to-r from-cyan-500 to-blue-500 w-full">
         <Navbar />
         <div>{children}</div>
         <Footer />

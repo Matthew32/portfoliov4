@@ -34,8 +34,8 @@ const GithubRepoCard = ({ title, link, number, usedImages = [] }) => {
       
       <a onClick={startLoading} href={link} className="hover:shadow-lg shadow-inner w-full block shadow-2xl">
         <Loading hidden={!isLoading} className="h-full w-full" />
-      <div hidden={isLoading} className="relative overflow-hidden border-8 border-sky-500">
-        <div className="h-72 object-cover">
+      <div hidden={isLoading} className="relative overflow-hidden bg-clip-padding bg-blue-600 border-4 border-blue-300 border-dashed">
+        <div className="h-72 object-cover ">
           <img 
             src={imageUrl}
             alt="portfolio"

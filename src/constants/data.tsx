@@ -1,7 +1,7 @@
 const userData = {
     githubUsername: "Matthew32",
     name: "Mateo Martinez",
-    designation: "Full-Stack Developer",
+    designation: "Senior Software Developer",
     avatarUrl: "/avatar.png",
     email: "matthewsdeveloper@gmail.com",
     phone: "+91 9587738861",
@@ -21,7 +21,7 @@ const userData = {
     },
     experience: [
       {
-        title: "Full stack Developer",
+        title: "Senior Software Developer",
         company: "Motocard",
         year: "2019",
         companyLink: "https://motocard.com",

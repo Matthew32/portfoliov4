@@ -3,12 +3,12 @@ import userData from "../constants/data";
 
 export default function Footer() {
   return (
-    <div className="bg-[#BBDEFB] dark:bg-[#1976D2]">
-      <div className="max-w-6xl  mx-auto px-4 py-10 md:py-20">
-        <div className="h-0.5 w-full bg-white dark:bg-gray-700"></div>
+    <div className="bg-gradient-to-r from-cyan-500 to-blue-500">
+      <div className="max-w-6xl  mx-auto px-4 py-10 md:py-40">
+        <div className="h-0.5 w-full bg-gradient-to-r from-cyan-500 to-blue-500"></div>
         <div className="flex flex-col space-y-4 md:space-y-0 md:flex-row justify-between md:items-center mt-8">
           <div>
-            <p>© Mateo Martinez. All Rights Reserved.</p>
+            <p className="md:text-white">© Mateo Martinez. All Rights Reserved.</p>
           </div>
           <div className="space-x-4 flex flex-row items-center">
 
@@ -20,7 +20,7 @@ export default function Footer() {
                 xmlns="http://www.w3.org/2000/svg"
                 width="16"
                 height="16"
-                fill="currentColor"
+                fill="white"
                 className="bi bi-twitter h-5 w-5"
                 viewBox="0 0 16 16"
               >
@@ -35,7 +35,7 @@ export default function Footer() {
                 xmlns="http://www.w3.org/2000/svg"
                 width="16"
                 height="16"
-                fill="currentColor"
+                fill="white"
                 className="bi bi-linkedin h-5 w-5"
                 viewBox="0 0 16 16"
               >
