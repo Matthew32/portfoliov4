@@ -1,4 +1,4 @@
-export default function Loading({hidden = false, className="relative overflow-hidden" }) {
+export default function Loading({ hidden = false, className = "relative overflow-hidden" }) {
     return <div hidden={hidden} className={className}>
         <span className="loading loading-ball loading-xs"></span>
         <span className="loading loading-ball loading-sm"></span>

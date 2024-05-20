@@ -12,16 +12,16 @@ const GithubRepoCard = ({ title, link, number, usedImages = [] }) => {
 
   const hasDuplicates = (url) => {
     for (let i = 0; i < usedImages.length; i++) {
-        if (usedImages[i] === url) {
-          return true;
+      if (usedImages[i] === url) {
+        return true;
       }
     }
     return false;
   };
-  const getCatImageUrl = async ()=> {
+  const getCatImageUrl = async () => {
     let catUrl = await getRandomCat();
-    while(hasDuplicates(catUrl)){
-      catUrl  = await getRandomCat();
+    while (hasDuplicates(catUrl)) {
+      catUrl = await getRandomCat();
     }
     usedImages.push(catUrl);
 
@@ -29,14 +29,14 @@ const GithubRepoCard = ({ title, link, number, usedImages = [] }) => {
   };
   useEffect(() => {
     getCatImageUrl();
-  },[]);
-    return (
-      
-      <a onClick={startLoading} href={link} className="hover:shadow-lg shadow-inner w-full block shadow-2xl">
-        <Loading hidden={!isLoading} className="h-full w-full" />
+  }, []);
+  return (
+
+    <a onClick={startLoading} href={link} className="hover:shadow-lg shadow-inner w-full block shadow-2xl">
+      <Loading hidden={!isLoading} className="h-full w-full" />
       <div hidden={isLoading} className="relative overflow-hidden bg-clip-padding bg-blue-600 border-4 border-blue-300 border-dashed">
         <div className="h-72 object-cover ">
-          <img 
+          <img
             src={imageUrl}
             alt="portfolio"
             className="transform hover:scale-125 transition duration-2000 ease-out object-cover h-full w-full"
@@ -50,6 +50,6 @@ const GithubRepoCard = ({ title, link, number, usedImages = [] }) => {
         </h1>
       </div>
     </a>
-    );
-  };
-  export default GithubRepoCard
+  );
+};
+export default GithubRepoCard

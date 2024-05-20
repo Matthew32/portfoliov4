@@ -7,8 +7,8 @@ import Footer from "./footer";
 
 export default function ContainerBlock({
   children,
-   ...customMeta 
-  }) {
+  ...customMeta
+}) {
   const router = useRouter();
 
   const meta = {
@@ -16,7 +16,7 @@ export default function ContainerBlock({
     description: `I've been developing websites for 5 years straight. Get in touch with me to know more.`,
     image: "/avatar.png",
     type: "website",
-    date :'',
+    date: '',
     ...customMeta,
   };
   return (
