@@ -3,7 +3,7 @@ import { NextResponse } from 'next/server'
 const getRandomCat = async () => {
   try {
     const res = await fetch(
-      `https://matttavern.com/api/pur`
+      `https://api.thecatapi.com/v1/images/search?limit=1`
     );
     const repos = await res.json() ?? {};
 
